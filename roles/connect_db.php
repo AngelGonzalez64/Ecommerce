@@ -1,16 +1,15 @@
 <?php
 
+$url = "localhost";
+$user = "root";
+$password = "";
+$db_name = "academ";
 
-		$mysqli = new MySQLi("localhost", "root","", "academ");
+		$mysqli = new MySQLi($url, $user,$password,$db_name);
 		if ($mysqli -> connect_errno) {
-			die( "Fallo la conexión a MySQL: (" . $mysqli -> mysqli_connect_errno() 
-				. ") " . $mysqli -> mysqli_connect_error());
+			die( "Fallo la conexión a MySQL: (" . $mysqli);
+		}else{
+			echo("Conexion Exitosa!!")
 		}
-		else
-			//echo "Conexión exitossa!";
-
-//	$link =mysqli_connect("localhost","root","");
-//	if($link){
-//		mysqli_select_db($link,"academ");
-//	}
+			
 ?>
