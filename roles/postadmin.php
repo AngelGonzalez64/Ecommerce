@@ -10,7 +10,7 @@
 	$checkemail=mysqli_query($mysqli,"SELECT * FROM login WHERE email='$mail'");
 	$check_mail=mysqli_num_rows($checkemail);
 		if($pass==$rpass){
-			if($check_mail>0){
+			if($check_mail >0){
 				echo ' <script language="javascript">alert("Atencion, ya existe el mail designado para un usuario, verifique sus datos");</script> ';
 			}else{
 				
