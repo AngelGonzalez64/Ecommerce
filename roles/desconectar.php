@@ -1,10 +1,10 @@
 <?php 
-session_start();
-if($_SESSION['user']){	
+session_star();
+if($_SESION['user']){	
 	session_destroy();
 	header("location:index.php");
 }
-else{
+elce{
 	header("location:index.php");
 }
 ?>
